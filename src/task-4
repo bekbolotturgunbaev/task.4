@@ -1,0 +1,15 @@
+select * from customer where country='Canada';
+select country from customer;
+select order_number,count(*) from orders group by order_number;
+select max(unit_price) from order_item;
+select max(total_amount) from orders where order_date between date 'Jan 1 2014' and date 'Dec 31 2014';
+select avg(unit_price) from order_item;
+
+select * from customer where country in ('Brazil','Spain');
+select * from orders where order_date between date 'Jan 1 2013' and date 'Dec 31 2014';
+select * from customer where country in ('Spain','Italy','Germany','France') order by country;
+select * from supplier join customer c on supplier.country = c.country;
+select * from customer where first_name like 'J0%';
+select * from customer where first_name like '%a' and first_name like '____';
+select country,count(*) from customer group by country;
+select country,count(*) from customer group by country order by country desc;
